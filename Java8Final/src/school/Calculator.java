@@ -20,18 +20,25 @@ public class Calculator {
         HashMap<String, Student> studentMap = new HashMap();
         
         for( int i=0; i < numberOfStudent; i++) {
-          Student student = new Student();  
+          Student student = new Student();
           System.out.println("Enter student name?:");
           String studentName = new Scanner(System.in).nextLine();
           student.setName(studentName);
           Set<String> keys = student.gpa.subjectGpa.keySet();
           
-          for (String subjName : keys) {
-                System.out.println("Enter PGA for subject " + subjName);
-                int gpa = new Scanner(System.in).nextInt();
+                      XX:
+  for (String subjName : keys) {
+                System.out.println("Enter GPA for subject " + subjName);              
+                int gpa = new Scanner(System.in).nextInt();                
+                //if(gpa.indexOf(".") < -1){
+                    
+                
+               if(gpa == 0 || gpa == 1 || gpa == 2|| gpa == 3|| gpa == 4){
+                   continue XX;
+                                
+                }
                 student.gpa.subjectGpa.put(subjName, gpa);
-            }   
-          
+            }             
           studentMap.put(student.name, student);
         }      
                
